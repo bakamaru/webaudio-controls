@@ -44,20 +44,28 @@ Operation | Component | Description
 ---
 ## How to use
 
-- load polymer.js
-> &lt;script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"&gt;&lt;/script&gt;  
+- load polymer.html
+```html
+<link rel="import" href="./bower_components/polymer/polymer.html">
+```
 
 - link to webaudio-knob component
-> &lt;link rel="import" href="components/controls.html" &gt;
+```html
+<link rel="import" href="webcomponents/webaudio-controls.min.html">
+```
 
 - insert `webaudio-knob/slider/switch/param/keyboard` element
-> &lt;webaudio-knob src="img/LittlePhatty.png" sprites="100" min="0" max="100"&gt;&lt;/webaudio-knob&gt;  
-> &lt;webaudio-slider src="img/hsliderbody.png"&gt;&lt;/webaudio-slider&gt;  
-> &lt;webaudio-switch src="img/switch_toggle.png" width="32" height="32"&gt;&lt;/webaudio-switch&gt;  
-> &lt;webaudio-param src="" link="knob-1"&gt;&lt;/webaudio-param&gt;  
-> &lt;webaudio-keyboard keys="25" &gt;&lt;/webaudio-keyboard&gt;  
+```html
+<webaudio-knob src="img/LittlePhatty.png" sprites="100" min="0" max="100"></webaudio-knob>
+<webaudio-slider src="img/hsliderbody.png"></webaudio-slider>
+<webaudio-switch src="img/switch_toggle.png" width="32" height="32"></webaudio-switch>  
+<webaudio-param src="" link="knob-1"></webaudio-param>
+<webaudio-keyboard keys="25"></webaudio-keyboard&gt;  
+````
 
----
+### Performance
+hoge.min.html, which is vulcanized polymer element, are located in _lib_ direcotry. Use these for faster loading of polymer elements.
+
 ## Attributes
 
 ### webaudio-knob
