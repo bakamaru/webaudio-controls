@@ -4,17 +4,17 @@
  *  webaudio-knob by Eiji Kitamura http://google.com/+agektmr
  *    Integrated and enhanced by g200kg http://www.g200kg.com/
  *
- *	 Licensed under the Apache License, Version 2.0 (the "License");
- *	 you may not use this file except in compliance with the License.
- *	 You may obtain a copy of the License at
+ *   Licensed under the Apache License, Version 2.0 (the "License");
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the License at
  *
- *	 http://www.apache.org/licenses/LICENSE-2.0
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- *	 Unless required by applicable law or agreed to in writing, software
- *	 distributed under the License is distributed on an "AS IS" BASIS,
- *	 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *	 See the License for the specific language governing permissions and
- *	 limitations under the License.
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
  *
  * */
 -->
@@ -36,6 +36,7 @@
     height: 64px;
     background-repeat: no-repeat;
     background-position: 0px 0px;
+    margin: auto;
   }
   #wac-value-tip {
     position: absolute;
@@ -144,16 +145,16 @@ Polymer( (function() {
                 value: 0
             }, 
             diameter: {
-                type: String,
+                type: Number,
                 value: 64
             }, 
             width: {
                 type: Number,
-                value: null
+                value: 0
             }, 
             height: {
                 type: Number,
-                value: null
+                value: 0
             },
             sensitivity: {
                 type: Number,
@@ -225,8 +226,6 @@ Polymer( (function() {
         offset:     0,
         minval:     0,
         maxval:     100,
-        width:      null,
-        height:     null,
         ctlStep:    1,
         digits:     0,
         startPosX:  null,
