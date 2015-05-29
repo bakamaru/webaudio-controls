@@ -95,9 +95,9 @@ Polymer( (function() {
 					  this.startVal = this.value;
 				}
 				if(this.direction == 'vert')
-				var offset = (this.startPosY - e.pageY) / this.ditchLength;
+				var offset = (this.startPosY - e.pageY) / this.ditchlength;
 				else
-				var offset = (e.pageX - this.startPosX) / this.ditchLength;
+				var offset = (e.pageX - this.startPosX) / this.ditchlength;
 				if(this.setValue(this.min + ((((this.startVal + (this.max - this.min) * offset * this.sensitivity / ((e.shiftKey ? 4:1))) - this.min) / this.step)|0) * this.step))
 				this.fire('change');
 				e.preventDefault();
@@ -155,7 +155,7 @@ Polymer( (function() {
                 type: Number,
                 value: 0
             }, 
-            ditchLength: {
+            ditchlength: {
                 type: Number,
                 value: 0
             }, 
@@ -199,8 +199,8 @@ Polymer( (function() {
 					      this.knobwidth = (this.direction == 'vert' ? this.width : this.height);
 				    if(this.knobheight == 0)
 					      this.knobheight = (this.direction == 'vert' ? this.width : this.height);
-				    if(this.ditchLength == 0)
-					      this.ditchLength = (this.direction =='vert' ? this.height - this.knobheight : this.width - this.knobwidth);
+				    if(this.ditchlength == 0)
+					      this.ditchlength = (this.direction =='vert' ? this.height - this.knobheight : this.width - this.knobwidth);
 				    var slib=this.$['wac-slibase'];
 				    var slik=this.$['wac-sliknob'];
 				    slib.addEventListener('DOMMouseScroll',this.wheel.bind(this),false);
@@ -331,11 +331,11 @@ Polymer( (function() {
 					      this.value = value < this.min ? this.min : value > this.max ? this.max : value;
 					      var range = this.max - this.min;
 					      if(this.direction == 'vert') {
-						        var pos = (this.height + this.ditchLength - this.knobheight)*0.5 - (this.value -this.min) / range * this.ditchLength;
+						        var pos = (this.height + this.ditchlength - this.knobheight)*0.5 - (this.value -this.min) / range * this.ditchlength;
 						        this.$['wac-sliknob'].style.top = pos + "px";
 					      }
 					      else {
-						        var pos = (this.width - this.ditchLength - this.knobwidth)*0.5  + (this.value - this.min) / range * this.ditchLength;
+						        var pos = (this.width - this.ditchlength - this.knobwidth)*0.5  + (this.value - this.min) / range * this.ditchlength;
 						        this.$['wac-sliknob'].style.left = pos+"px";
 					      }
 					      this.valuedisp = this.value.toFixed(this.digits);
